@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title> S-Diary </title>
+	<meta name="description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">
+	   <meta http-equiv="X-UA compatible" content="IE-edge">
+	   <meta property="og:title" content="Sapora">
+	   <meta property="og:url" content="https://www.sapora.com">
+	   <meta property="og:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">	
+	   <meta property="og:type" content="website">
+	   <meta name="twitter:card" content="summary">
+	   <meta name="twitter:title" content="SAPORA">
+	   <meta name="twitter:url" content="https://www.sapora.com">
+	   <meta name="twitter:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="twitter:image" content="/media/favicon/favicon.png">
+	   <meta name="weibo:type" content="webpage">
+	   <meta name="weibo:webpage:url" content="https://www.sapora.com">
+	   <meta name="weibo:webpage:title" content="SAPORA">
+	   <meta name="weibo:webpage:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="weibo:webpage:image" content="/media/favicon/favicon.png">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="shortcut icon" href="/media/favicon/favicon.png" type="image/x-icon" />
+</head>
+<body>
+    <style>
+		body{ background-color:antiquewhite;font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;}
+		#header{
+    z-index: 1;
+	position: fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height: 50px;
+	background-color: transparent;
+	border-bottom: 2px solid #737579;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+}
+#icon{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius:25px;
+
+}
+   body::-webkit-scrollbar{
+            display: none;
+        }
+
+#MainIcon{
+	float:right;
+	display: inline-block;
+		margin: auto;
+		margin-top: -50px;
+		margin-right: 10px;
+		padding-top:10px;
+		width:50px;
+		height: 40px;
+		border-radius: 100px;
+		background-color: #2bbdf6;
+		text-align:center;
+		font-family:verdana,arial,helvetica,sans-serif;
+		font-size:25px;
+		color:white;  
+	}
+#MainIcon1{
+	float:right;
+	display: inline-block;
+		margin: auto;
+		margin-top: 0px;
+		padding-top:30px;
+		width:200px;
+		height: 170px;
+		border-radius: 100px;
+		background-color: #000;
+		text-align:center;
+		font-family:verdana,arial,helvetica,sans-serif;
+		font-size:100px;
+		color:white;  
+	}
+	.dropdown {
+		padding-top: 20px;
+		width: 80px;
+		font-size: 18px;
+		height: 30px;
+        margin:auto; 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top:50px;
+  background-color: black;
+  color: antiquewhite;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding:0px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.tablinks{
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	cursor: pointer;
+	width: 95%;
+	height: 40px;
+	background-color: #000;
+	color:antiquewhite;
+	outline: 0px;
+	border: 0px;
+	font-size: 18px;
+    padding-left: 5%;
+    padding-top:10px;}
+.tablinks:hover{
+	background-color: antiquewhite;
+	color:#000;
+}
+.tabcontent{
+	position: absolute;
+	display: none;
+	top:50px;
+	left:0px;
+	width: 100%;
+	height: 600px;
+}
+        a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.Footer{
+	z-index: 1;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 50px;
+	left: 0px;
+	background-color: #f4f4f4;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+    border-top:1px solid #000;
+}
+.Title{
+	text-align: center;
+	font-size: 20px;
+	width: 85px;
+	height: 30px;
+	background-color: #000;
+	color: antiquewhite;
+	border-radius: 10px;
+}
+.Title:hover{
+	background-color: transparent;
+	width: 100px;
+	text-align: center;
+	height: 30px;
+	color: #000;
+}
+.LoginUser{
+	margin:auto;
+	display: box;
+	border-radius: 20px;
+	margin-top: 5px;
+	text-align: center;
+	padding-top: 10px;
+	height: 30px;
+	width: 100px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #6699ff;
+}
+a{text-decoration: none;}
+.PrimaryColumn{
+	position: absolute;
+	white-space: nowrap;
+	display: inline-block;
+	top:30px;
+	left:0px;
+	width: 100%;
+	height: auto;
+    background-color: transparent;
+    z-index: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.Slide{
+	display: inline-block;
+	top:0px;
+	left: 0px;
+	width: 400px;
+	height: auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	overflow-y: hidden;
+
+}
+.SlideImage{
+	margin:auto;
+	margin-top: 20px;
+	width: 200px;
+	height: 200px;
+}
+.SlideCaption{
+	white-space: normal;
+	margin: auto;
+	display: block;
+	margin-top: 20px;
+	width: 300px;
+	height: 100px;
+	text-align: center;
+	font-size: 20px;
+	overflow: hidden;
+	overflow-y: auto;
+
+}
+.SlideTitle{
+	font-size: 25px;
+	margin:auto;
+	margin-top: 20px;
+	width: 50%;
+	font-weight: bolder;
+	color: #2bbdf6;
+	height: 40px;
+	text-align: center;
+	background-color: #fff;
+	border:2px solid #2bbdf6;
+	border-radius: 20px;
+	padding-top: 10px;
+}
+.StationaryInfo{
+	position: fixed;
+	bottom:60px;
+	width: 280px;
+	background-color: #000;
+	color: antiquewhite;
+	height: 30px;
+	text-align: center;
+	border-radius: 20px;
+}
+.SignUpR{
+	margin-top: 5px;
+  
+	display: inline-block;
+	float: right;
+	border: 0px;
+	outline: 0px;
+	height: 40px;
+	width: 100px;
+	background-color: #6699ff;
+	color:#fff;
+	border-radius: 20px;
+
+}
+.SignUpR:hover,.SignUpR:focus{
+	text-decoration: none;
+	outline: 0px;
+}
+#SlideShowImage{
+	width: 100%;
+	height: 200px;
+	object-fit:contain;
+
+}
+.asp{
+	width: 60%;
+}
+.ConnectOne,.ConnectTwo{
+	margin:auto;
+	width: 160px;
+	height: 50px;
+
+}
+.ConnectOne:hover,.ConnectTwo:hover,.ConnectOne:active,.ConnectTwo:active{
+	border:0px;
+	outline: 0px;
+	text-decoration: none;
+}
+.ConnectText{
+	display: inline-block;
+	margin-top: -10px;
+	color:#000;
+}
+a:focus{
+	outline: 0 none !important;
+}
+input{
+	display: inline-block;
+	margin-top: 10px;
+	padding-left:2%;
+	margin-left:5%;
+	width: 80%;
+	border:0px;
+	outline:0px;
+	height: 40px;
+	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+	border-bottom:2px solid #6699ff;
+	background-color: #fff;
+}#form{
+	position:absolute;
+	top:50px;
+	width: 400px;
+}
+button{
+	position: absolute;
+	top:250px;
+	left: 0px;
+	cursor: pointer;
+	margin-top: 10px;
+	width:80%;
+	height: 40px;
+	margin-left:5%;
+	background-color: #6699ff;
+	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+	color:#fff;
+	border:0px;
+	outline:0px;
+	
+}
+.password{
+	position: absolute;
+	top:75px;
+	left: 0px;
+}
+.password1{
+	position: absolute;
+	top:150px;
+	left: 0px;
+}
+  .PrimaryColumn::-webkit-scrollbar{
+            display: none;
+        }
+        .PrimaryColumn::-scrollbar{
+            display: none;
+        }
+	</style>
+    <div id="header"><a href=""><img id="icon"src="/media/Favicon/favicon.PNG"/></a>
+    	<div class="dropdown">
+  <div class="Title">S-Diary&#9660;</div>
+  <div class="dropdown-content">
+   <a href="/Home"class="tablinks" >Home</a>
+   <a href="/Features" class="tablinks">Features</a>
+   <a href="/Privacy"class="tablinks">Privacy</a>
+   <a href="/AboutUs"class="tablinks">About Us</a>
+   <a href="/SaporaInc"class="tablinks">Sapora Inc.</a>
+  </div>
+</div>
+	<div id="MainIcon">S</div>
+</div>
+<!--Header Finishes-->
+<!--Making Footer Now-->
+<div class="Footer">
+  <a href="/Login"><div class="LoginUser"> Log in</div></a>
+  <button class="SignUpR">Sign Up</button>
+</div>
+<!--Footer Finishes now-->
+<div class="PrimaryColumn">
+
+
+	<div class="Slide">
+		<div class="SlideImage">
+			<img src="/media/MainPage/Book.svg" style="width:100%" id="SlideShowImage">
+		</div>
+		<div class="SlideCaption">
+			Start writing intersting moments of this day, making it memorable
+		</div>
+		<div class="SlideTitle">
+			Diary
+		</div>
+	</div>
+
+	<div class="Slide">
+		<div class="SlideImage">
+			<img src="/media/MainPage/Sync.svg" style="width:100%" id="SlideShowImage">
+		</div>
+		<div class="SlideCaption">
+			No need to store Your personalized S-Diary on your device
+		</div>
+		<div class="SlideTitle">
+			No Sync
+		</div>
+	</div>
+
+	<div class="Slide">
+		<div class="SlideImage">
+			<img src="/media/MainPage/Responsive.svg" style="width:100%" id="SlideShowImage">
+		</div>
+		<div class="SlideCaption">
+			Write with Desktop, Phone, Tablet, whichever suits you
+		</div>
+		<div class="SlideTitle asp">
+			Choose Your device
+		</div>
+	</div>
+
+	<div class="Slide">
+		<div class="SlideImage">
+			<img src="/media/MainPage/Privacy.svg" style="width:100%" id="SlideShowImage">
+		</div>
+		<div class="SlideCaption">
+			We value your privacy at top
+		</div>
+		<div class="SlideTitle">
+			Privacy
+		</div>
+	</div>
+
+	<div class="Slide">
+		<div class="SlideImage">
+			<div id="MainIcon1">S</div>
+		</div>
+		<div class="SlideCaption">
+			<a href="https://instagram.com/sapora_signal"><div class="ConnectOne"><img src="media/Icon/Instagram.png"/><div class="ConnectText">Instagram</div></div></a>
+			<a href="https://twitter.com/saporasignal"><div class="ConnectTwo"><img src="media/Icon/Twitter.png"/><div class="ConnectText">Twitter</div></div></a>
+		</div>
+		<div class="SlideTitle">
+			Follow Us
+		</div>
+	</div>
+
+	<div class="Slide">
+		<form method="POST" id="form">
+			{% csrf_token %}
+			{{ form.Username }}
+			{{ form.Password }}
+			{{ form.CheckPassword }}
+			<button type="submit">Sign Up</button>
+	</div>
+
+	
+
+
+</div>
+
+
+<!--Making A relative Stationary Piece of Information-->
+<div class="StationaryInfo">
+	Swipe to see More  or Sign Up >
+</div>
+ 
+
+
+
+

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title> S-Diary </title>
+	<meta name="description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">
+	   <meta http-equiv="X-UA compatible" content="IE-edge">
+	   <meta property="og:title" content="Sapora">
+	   <meta property="og:url" content="https://www.sapora.com">
+	   <meta property="og:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">	
+	   <meta property="og:type" content="website">
+	   <meta name="twitter:card" content="summary">
+	   <meta name="twitter:title" content="SAPORA">
+	   <meta name="twitter:url" content="https://www.sapora.com">
+	   <meta name="twitter:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="twitter:image" content="/media/favicon/favicon.png">
+	   <meta name="weibo:type" content="webpage">
+	   <meta name="weibo:webpage:url" content="https://www.sapora.com">
+	   <meta name="weibo:webpage:title" content="SAPORA">
+	   <meta name="weibo:webpage:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="weibo:webpage:image" content="/media/favicon/favicon.png">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="shortcut icon" href="/media/favicon/favicon.png" type="image/x-icon" />
+</head>
+<body>
+    <style>
+        a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+		body{ background-color:antiquewhite;font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;}
+		#header{
+	z-index: 2;
+	position: fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height: 50px;
+	background-color: antiquewhite;
+	border-bottom: 2px solid #000;
+}
+.HeadingColumnConnect{
+	margin:0px;
+	width: 100%;
+	height: 50px;
+	margin-top: 10px;
+	color:#000;
+	text-align: center;
+	font-family: cursive;
+	font-size: 20px;
+}
+#icon{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius:25px;
+
+}
+.ColumnConnect{
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	font-family: cursive;
+}
+.Title:hover{
+	background-color: transparent;
+	width: 100px;
+	text-align: center;
+	height: 30px;
+	color: #000;
+}
+
+#MainIcon{
+	float:right;
+	display: inline-block;
+		margin: auto;
+		margin-top: -50px;
+		margin-right: 10px;
+		padding-top:10px;
+		width:50px;
+		height: 40px;
+		border-radius: 100px;
+		background-color: #2bbdf6;
+		text-align:center;
+		font-family:verdana,arial,helvetica,sans-serif;
+		font-size:25px;
+		color:white;  
+	}
+#MainIcon1{
+	float:right;
+	display: inline-block;
+		margin: auto;
+		margin-top: 0px;
+		padding-top:30px;
+		width:200px;
+		height: 170px;
+		border-radius: 100px;
+		background-color: #000;
+		text-align:center;
+		font-family:verdana,arial,helvetica,sans-serif;
+		font-size:100px;
+		color:white;  
+	}
+.CompanyInfo{
+	position: absolute;
+	width: 95%;
+	height: auto;
+	background-color: #fff;
+	padding: 0px;
+}
+.TextConnect{
+	margin:auto;
+	margin-top: -40px;
+	width: 100px;
+	height: 20px;
+}
+	.dropdown {
+		padding-top: 20px;
+		width: 80px;
+		font-size: 18px;
+		height: 30px;
+        margin:auto; 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top:50px;
+  background-color: black;
+  color: antiquewhite;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding:0px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.CompanyHeading{
+	width: 100%;
+	height: 50px;
+	margin-top: 10px;
+	color:#000;
+	text-align: center;
+	font-family: cursive;
+	font-size: 20px;
+}
+.Title{
+	text-align: center;
+	font-size: 20px;
+	width: 85px;
+	height: 30px;
+	background-color: #000;
+	color: antiquewhite;
+	border-radius: 10px;
+}
+.CompanyFirstRow{
+	display: inline-block;
+	width: 45%;
+	height: 50px;
+	margin-top: 10px;
+	color:#000;
+	text-align: center;
+	font-family: cursive;
+	font-size: 16px;
+	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+}
+.tablinks{
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	cursor: pointer;
+	width: 95%;
+	height: 40px;
+	background-color: #000;
+	color:antiquewhite;
+	outline: 0px;
+	border: 0px;
+	font-size: 18px;
+    padding-left: 5%;
+    padding-top:10px;}
+.tablinks:hover{
+	background-color: antiquewhite;
+	color:#000;
+}
+.BlogColumn{
+	margin-top: 60px;
+	width: 100%;
+	height: auto;
+	background-color:transparent;
+	font-size: 20px;
+}
+.ConnectColumn{
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	padding: 0px;
+}
+a,a:hover{
+   text-decoration: none;
+   color:#2bbdef;
+}
+.CompanySecondRow{
+	display: inline-block;
+	width: 45%;
+	height: 50px;
+	margin-top: 10px;
+	color:#2bbdf6;
+	text-align: center;
+	font-family: cursive;
+	font-size: 16px;
+	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+}
+@media(min-width: 700px){
+	.BlogColumn{
+		width: 750px;
+	}
+	.ConnectColumn{
+		position: absolute;
+		top:50px;
+		left: 770px;
+		width: 300px;
+	}
+	.CompanyInfo{
+		width: 100%;
+	}
+    body{background-color: #f4f4f4;}
+    #header{
+    	background-color: #f4f4f4;
+    }
+}
+</style>
+ <div id="header"><a href=""><img id="icon"src="/media/Favicon/favicon.PNG"/></a>
+    	<div class="dropdown">
+  <div class="Title">S-Diary&#9660;</div>
+  <div class="dropdown-content">
+   <a href="/Home"class="tablinks" >Home</a>
+   <a href="/Features" class="tablinks">Features</a>
+   <a href="/Privacy"class="tablinks">Privacy</a>
+   <a href="/AboutUs"class="tablinks">About Us</a>
+   <a href="/SaporaInc"class="tablinks">Sapora Inc.</a>
+  </div>
+</div>
+	<div id="MainIcon">S</div>
+</div>
+
+
+<!--Blog Column-->
+<div class="BlogColumn">
+	<h3>About Us</h3>
+	<p>S-Diary is a private diary service currently,under beta-testing launched on 18 December 2018 by Sapora Inc. in order to provide its users a non-judgmental platform to express themselves freely, taking things higher than number of likes and comments.
+	It is the only thing about us , nothing fancy.</p>
+	<h3>A Special Note</h3>
+	<p>Thanks to all of you for taking part in Beta-Testing of S-Diary, spending your precious time for it. Can you please fill this form?<br/>
+	<a href="https://goo.gl/forms/VmNNiL6AntczNNgt2" >Submit a response</a>
+</div>
+
+
+<!--Connect Us column-->
+<div class="ConnectColumn">
+	 <div class="HeadingColumnConnect">Connect with us</div>
+
+	  <a href="https://instagram.com/sapora_signal" class="ConnectLink"><div class="ColumnConnect"><img src="/media/Icon/Instagram.png"/><div class="TextConnect">Sapora_Signal</div></div></a>
+
+      <a href="https://twitter.com/saporasignal" class="ConnectLink"><div class="ColumnConnect"><img src="/media/Icon/Twitter.png"/><div class="TextConnect">SAPORAsignal</div></div></a>
+
+      <a href="https://www.youtube.com/channel/UCvsa_5QIw7rSRYRSwHURQuw?view_as=subscriber" class="ConnectLink"><div class="ColumnConnect"><img src="/media/Icon/Youtube.png"/><div class="TextConnect">SAPORA inc.</div></div></a>
+
+
+     <div class="CompanyInfo">
+
+   	      <div class="CompanyHeading">Company Information</div>
+   	 
+   	      <div class="CompanyHeading">
+   	  	    <div class="CompanyFirstRow">
+   	  		    Parent Company
+   	  	    </div>
+   	  	    <div class="CompanySecondRow">
+   	  		    Sapora Inc.
+   	  	    </div>
+   	      </div>
+
+   	      <div class="CompanyHeading">
+   	  	    <div class="CompanyFirstRow">
+   	  		    Headquarters
+   	  	    </div>
+   	  	    <div class="CompanySecondRow">
+   	  		     New Delhi
+   	  	    </div>
+   	      </div>
+
+   	      <div class="CompanyHeading">
+   	  	    <div class="CompanyFirstRow">
+   	  		    Founder & CEO
+   	  	    </div>
+   	  	    <div class="CompanySecondRow">
+   	  		     Gagan Singh
+   	  	    </div>
+   	      </div>
+   	 
+    </div>
+
+ 
+</div>

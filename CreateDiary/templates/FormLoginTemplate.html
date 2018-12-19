@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title> S-Diary </title>
+	<meta name="description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">
+	   <meta http-equiv="X-UA compatible" content="IE-edge">
+	   <meta property="og:title" content="Sapora">
+	   <meta property="og:url" content="https://www.sapora.com">
+	   <meta property="og:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">	
+	   <meta property="og:type" content="website">
+	   <meta name="twitter:card" content="summary">
+	   <meta name="twitter:title" content="SAPORA">
+	   <meta name="twitter:url" content="https://www.sapora.com">
+	   <meta name="twitter:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="twitter:image" content="/media/favicon/favicon.png">
+	   <meta name="weibo:type" content="webpage">
+	   <meta name="weibo:webpage:url" content="https://www.sapora.com">
+	   <meta name="weibo:webpage:title" content="SAPORA">
+	   <meta name="weibo:webpage:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="weibo:webpage:image" content="/media/favicon/favicon.png">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="shortcut icon" href="/media/favicon/favicon.png" type="image/x-icon" />
+</head>
+<body>
+<style type="text/css">
+body{ background-color: #f4f4f4;font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif; }
+#header{position: fixed;top:0px;left:0px;width:100%;height: 50px;background-color: #f4f4f4;text-align:center;z-index: 2;}
+#icon{position: absolute;left:0px;width: 50px;height: 50px;object-fit: cover;border-radius:25px;}
+#FooterList{
+	position:absolute;
+	left:300px;
+	bottom:-15px;
+	list-style: none;
+	background-color: transparent;
+	width:600px;
+	height: 50px;
+}
+a{
+	text-decoration: none;
+	color:#737579;
+}
+a:hover{
+	border-bottom:2px solid #737579;
+}
+.List{
+	margin-top: 15px;
+	display:inline-block;
+	width:100px;
+	height:35px;
+	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+	color:#fff;
+}
+#MainIcon{
+	float:right;
+	display: inline-block;
+		margin: auto;
+		margin-top: -33px;
+		margin-right: 10px;
+		padding-top:10px;
+		width:50px;
+		height: 40px;
+		border-radius: 100px;
+		background-color: #2bbdf6;
+		text-align:center;
+		font-family:verdana,arial,helvetica,sans-serif;
+		font-size:25px;
+		color:white;  
+	}
+	#TextIcon{
+		position: absolute;
+		bottom:40px;
+		width: 405px;
+		height: auto;
+		margin:auto;
+		text-align: center;
+		color:#fff;
+		font-family:verdana,arial,helvetica,sans-serif;
+		font-size: 5px;
+}
+.FormContainer{
+	position: absolute;
+	top:53px;
+	left:380px;
+	width:410px;
+	height: 395px;
+	background-color: #f4f4f4; 
+
+}
+input{
+	margin-top: 10px;
+	padding-left:2%;
+	margin-left:5%;
+	width: 88%;
+	border:0px;
+	outline:0px;
+	height: 40px;
+	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+	border-bottom:2px solid #6699ff;
+	background-color: #fff;
+}
+#form{
+	position:absolute;
+	top:100px;
+}
+button{
+	cursor: pointer;
+	margin-top: 10px;
+	width:90%;
+	height: 40px;
+	margin-left:5%;
+	background-color: #6699ff;
+	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+	color:#fff;
+	border:0px;
+	outline:0px;
+	
+}
+.ErrorList{
+	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+	position:absolute;
+	top:300px;
+	text-decoration: none;
+	color:red; 
+	list-style: none;
+}
+.ErrorList li{
+	text-decoration: none;
+}
+#LOGIN{
+	margin:auto;
+	margin-top: 10px;
+	color:#2bbdf6;
+	font-size:20px; 
+}
+@media(max-width: 400px)
+{
+	.FormContainer{
+		left:0px;
+		width: 100%;
+	}
+	#FooterList{
+		left:0px;
+		padding: 0px;
+		width: 100%;
+		text-align: center;
+	}
+	#icon{
+		border-radius: 40px: 
+	}
+}
+</style>
+<div id="header"><a href=""><img id="icon"src="/media/Favicon/favicon.PNG"/></a>
+	<p id="LOGIN">Login</p>
+	<div id="MainIcon">S</div></div>
+
+<div class="FormContainer">
+	
+	<form method="POST" id="form">
+		<input type='hidden' name='csrfmiddlewaretoken' value="jqhdwjavwjagjzbefjwdjqlkkop2j3ofje" />
+		{% csrf_token %}
+		{{form1.Username}}
+		{{form1.Password}}
+		<button type="submit">Submit</button>
+	</form>
+	<ul class="ErrorList">
+	<li>{{form1.Username.errors}}</li>
+	<li>{{form1.Password.errors}}</li>
+	</ul>
+</div>
+   
+   <ul id="FooterList">
+	<li class="List"><a href="/Home">Home</a></li>
+	<li class="List"><a href="/Features">Features</a></li>
+	<li class="List"><a href="/Privacy">Privacy</a></li>
+	<li class="List"><a href="/AboutUs">About Us</a></li>
+	<li class="List"><a href="/SaporaInc">Sapora Inc.</a></li>
+</ul>

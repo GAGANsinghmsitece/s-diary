@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title> S-Diary </title>
+	<meta name="description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">
+	   <meta http-equiv="X-UA compatible" content="IE-edge">
+	   <meta property="og:title" content="Sapora">
+	   <meta property="og:url" content="https://www.sapora.com">
+	   <meta property="og:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">	
+	   <meta property="og:type" content="website">
+	   <meta name="twitter:card" content="summary">
+	   <meta name="twitter:title" content="SAPORA">
+	   <meta name="twitter:url" content="https://www.sapora.com">
+	   <meta name="twitter:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="twitter:image" content="/media/favicon/favicon.png">
+	   <meta name="weibo:type" content="webpage">
+	   <meta name="weibo:webpage:url" content="https://www.sapora.com">
+	   <meta name="weibo:webpage:title" content="SAPORA">
+	   <meta name="weibo:webpage:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="weibo:webpage:image" content="/media/favicon/favicon.png">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="shortcut icon" href="/media/favicon/favicon.png" type="image/x-icon" />
+</head>
+<body>
+    <style>
+        a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{ background-color:#f4f4f4;font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;}
+		#header{
+	z-index: 2;
+	position: fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height: 50px;
+	background-color: #f0f0f0;
+	border-bottom: 2px solid #2bbdf6;
+}
+.BlogParagraph,.ParagraphBlogPara{
+	width: 90%;
+	height: auto;
+	margin-left: 5%;
+	font-family: cursive;
+	font-size: 20px;
+	color: #2bbdf6;
+}
+.ParagraphBlogPara{
+	display: inline-block;
+	color:#c7c7c7;
+}
+.CompanyInfo{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+}
+#icon{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius:5px;
+
+}
+#Footer{
+	position: absolute;
+	bottom:0px;
+	left:0px;
+	padding-top:20px;
+	height: 30px;
+	width:100%;
+	background-color: #f7f7f7;
+	color:#6699ff;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 20px;
+}
+#MainIcon{
+	float:right;
+	display: inline-block;
+		margin: auto;
+		margin-right: 10px;
+		padding-top:10px;
+		width:50px;
+		height: 40px;
+		border-radius: 100px;
+		background-color: #2bbdf6;
+		text-align:center;
+		font-family:verdana,arial,helvetica,sans-serif;
+		font-size:25px;
+		color:white;  
+	}
+	#TextIcon{
+		position: absolute;
+		bottom:40px;
+		width: 405px;
+		height: auto;
+		margin:auto;
+		text-align: center;
+		color:#fff;
+		font-family:verdana,arial,helvetica,sans-serif;
+		font-size: 5px;
+}
+#FooterList{
+	position:absolute;
+	left:55px;
+	top:-15px;
+	list-style: none;
+	position: absolute;
+	background-color: transparent;
+	width:600px;
+	height: 50px;
+}
+a{
+	text-decoration: none;
+	color:#6699ff;
+}
+a:visited{
+	text-decoration: none;
+	outline: 0px;
+}
+a:hover{
+	
+}
+a:visited{
+	text-decoration: none;
+	outline: 0px;
+}
+.List:hover{
+	border-bottom:2px solid #2bbdf6;
+}
+.List{
+	margin-top: 15px;
+	display:inline-block;
+	width:100px;
+	height:35px;
+	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+	color:#fff;
+}
+#icon1{display: none;}
+#MainIcon1{display: none;}
+.BlogColumn{
+	position: absolute;
+	top:53px;
+	left: 0px;
+	width: 750px;
+	height: 600px;
+	background-color: transparent;
+}
+.CompanyFirstRow{
+	display: inline-block;
+	width: 49%;
+	height: 50px;
+	margin-top: 10px;
+	color:#000;
+	text-align: center;
+	font-family: cursive;
+	font-size: 16px;
+	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+}
+.HeadingBlog1{
+	width: 100%;
+	height: auto;
+	background-color: #f8f5f1;
+	text-align: center;
+	color:#c7c7c7;
+	font-size: 24px;
+	font-size-family:sans-serif;
+}
+.HeadingBlog{
+	width: 100%;
+	height: 50px;
+	margin-top: 10px;
+	color:#000;
+	text-align: center;
+	font-size: 60px;
+	font-family: "Roboto",sans-serif;
+
+}
+.CompanySecondRow{
+	display: inline-block;
+	width: 49%;
+	height: 50px;
+	margin-top: 10px;
+	color:#2bbdf6;
+	text-align: center;
+	font-family: cursive;
+	font-size: 16px;
+	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+}
+.ConnectColumn{
+	position: absolute;
+	top:53px;
+	left: 760px;
+	width: 300px;
+	height: auto;
+	background-color: transparent;
+}
+.CompanyHeading{
+	width: 100%;
+	height: 50px;
+	margin-top: 10px;
+	color:#000;
+	text-align: center;
+	font-family: cursive;
+	font-size: 20px;
+}
+.HeadingColumnConnect{
+	width: 100%;
+	height: 50px;
+	margin-top: 10px;
+	color:#000;
+	text-align: center;
+	font-family: cursive;
+	font-size: 20px;
+}
+.ColumnConnect{
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	font-family: cursive;
+}
+.TextConnect{
+	margin:auto;
+	margin-top: -40px;
+	width: 100px;
+	height: 20px;
+}
+a,a:hover{
+	text-decoration: none;
+}
+.extra{
+	color: #000;
+	font-size: 24px;
+}
+.Quote{
+	color:#2bbdf6;
+	font-size: 30px;
+}
+
+
+@media(max-width: 700px){
+ body{
+ 	background-color: #fff;
+ }
+ #header{display: none}
+ #header1{
+    z-index: 1;
+	position: fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height: 50px;
+	background-color: antiquewhite;
+	border-bottom: 2px solid #737579;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+}
+#icon1{
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius:25px;
+
+}
+.dropdown1 {
+		padding-top: 20px;
+		width: 80px;
+		font-size: 18px;
+		height: 30px;
+        margin:auto; 
+}
+.Title1{
+	text-align: center;
+	font-size: 20px;
+	width: 85px;
+	height: 30px;
+	background-color: #000;
+	color: antiquewhite;
+	border-radius: 10px;
+}
+.Title1:hover{
+	background-color: transparent;
+	width: 100px;
+	text-align: center;
+	height: 30px;
+	color: #000;
+}
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  top:50px;
+  background-color: black;
+  color: antiquewhite;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding:0px;
+  z-index: 1;
+}
+
+.dropdown1:hover .dropdown-content1 {
+  display: block;
+}
+
+.tablinks1{
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	cursor: pointer;
+	width: 95%;
+	height: 40px;
+	background-color: #000;
+	color:antiquewhite;
+	outline: 0px;
+	border: 0px;
+	font-size: 18px;
+    padding-left: 5%;
+    padding-top:10px;}
+.tablinks1:hover{
+	background-color: antiquewhite;
+	color:#000;
+}
+#MainIcon1{
+	float:right;
+	display: inline-block;
+		margin: auto;
+		margin-top: -50px;
+		margin-right: 10px;
+		padding-top:10px;
+		width:50px;
+		height: 40px;
+		border-radius: 100px;
+		background-color: #2bbdf6;
+		text-align:center;
+		font-family:verdana,arial,helvetica,sans-serif;
+		font-size:25px;
+		color:white;  
+	}
+.CompanyFirstRow{
+	width: 48%;
+}
+.BlogColumn{
+	width: 100%;
+}
+.ConnectColumn{
+	display: none;
+
+}
+
+	</style>
+	<div id="header"><a href=""><img id="icon"src="/media/Favicon/favicon.PNG"/></a>
+	<div id="MainIcon">S</div>
+<ul id="FooterList">
+	<li class="List"><a href="/Home">Home</a></li>
+	<li class="List"><a href="/Features">Features</a></li>
+	<li class="List"><a href="/Privacy">Privacy</a></li>
+	<li class="List"><a href="/AboutUs">About Us</a></li>
+	<li class="List"><a href="/SaporaInc">Sapora Inc.</a></li>
+</ul>
+   
+</div>
+
+ <div id="header1"><a href=""><img id="icon1"src="/media/Favicon/favicon.PNG"/></a>
+    	<div class="dropdown1">
+  <div class="Title1">S-Diary&#9660;</div>
+  <div class="dropdown-content1">
+   <a href="/Home"class="tablinks1" >Home</a>
+   <a href="/Features" class="tablinks1">Features</a>
+   <a href="/Privacy"class="tablinks1">Privacy</a>
+   <a href="/AboutUs"class="tablinks1">About Us</a>
+   <a href="/SaporaInc"class="tablinks1">Sapora Inc.</a>
+  </div>
+</div>
+	<div id="MainIcon1">S</div>
+</div>
+
+
+<div class="BlogColumn">
+	<div class="HeadingBlog">
+		Features
+	</div>
+
+	<div class="BlogParagraph">
+		<p>S-Diary comes with a set of some powerful features that help you to write securely, your personalized diary with text only(image-testing is in testing phase). Each S-Diary account comes with a set of basic login system, add diaries based on dates and also a profile facility.</p>
+		
+		<div class="HeadingBlog1"style="background-color: #ae785f;">Make your memories count<p class="ParagraphBlogPara"><p class="Quote">"</p><p class="extra">Life is not measured by the number of breathes we take but by the number of moments that take our breath away</p><p class="Quote">"</p></p><p class="ParagraphBlogPara">We believe that your moments are precious and cannot be evaluated by a mere number of likes and comments. So, keep an account of your best days that matter most. </p>
+		</div>
+
+
+	    <div class="HeadingBlog1"style="background-color: #b85d3c;margin-top: 10px;margin-bottom: 20px;">Distraction-free design<div><img src="/media/Icon/Cross.svg" style="width:120px;height: 120px;margin:auto;margin-top: 30px;"/></div><p class="ParagraphBlogPara"style="color: #fff;">We build a simple, plain and effective User interface so as to ensure a distraction-free environment suitable for writing diary,</p></div>
+
+	    <div class="HeadingBlog1"style="margin-bottom: 40px;background-color: #f17226;">Write wherever you go<div><img src="/media/MainPage/Responsive.svg"/ style="width:200px;height: 200px;margin-top: 30px;"></div><p class="ParagraphBlogPara"style="color:#fff;">S-Diary is reponsive on almost all devices so you can write at any moment with any device you have making your transition from smartphones to desktop ,or vice-versa smooth.</p></div>
+
+	    
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ConnectColumn">
+	  <div class="HeadingColumnConnect">Connect with us</div>
+
+	  <a href="https://instagram.com/sapora_signal" class="ConnectLink"><div class="ColumnConnect"><img src="/media/Icon/Instagram.png"/><div class="TextConnect">Sapora_Signal</div></div></a>
+
+      <a href="https://twitter.com/saporasignal" class="ConnectLink"><div class="ColumnConnect"><img src="/media/Icon/Twitter.png"/><div class="TextConnect">SAPORAsignal</div></div></a>
+
+      <a href="https://www.youtube.com/channel/UCvsa_5QIw7rSRYRSwHURQuw?view_as=subscriber" class="ConnectLink"><div class="ColumnConnect"><img src="/media/Icon/Youtube.png"/><div class="TextConnect">SAPORA inc.</div></div></a>
+
+
+     <div class="CompanyInfo">
+
+   	      <div class="CompanyHeading">Company Information</div>
+   	 
+   	      <div class="CompanyHeading">
+   	  	    <div class="CompanyFirstRow">
+   	  		    Parent Company
+   	  	    </div>
+   	  	    <div class="CompanySecondRow">
+   	  		    Sapora Inc.
+   	  	    </div>
+   	      </div>
+
+   	      <div class="CompanyHeading">
+   	  	    <div class="CompanyFirstRow">
+   	  		    Headquarters
+   	  	    </div>
+   	  	    <div class="CompanySecondRow">
+   	  		     New Delhi
+   	  	    </div>
+   	      </div>
+
+   	      <div class="CompanyHeading">
+   	  	    <div class="CompanyFirstRow">
+   	  		    Founder & CEO
+   	  	    </div>
+   	  	    <div class="CompanySecondRow">
+   	  		     Gagan Singh
+   	  	    </div>
+   	      </div>
+   	 
+    </div>
+
+ 
+
+
+</div>

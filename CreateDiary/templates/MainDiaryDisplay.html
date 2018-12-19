@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title> S-Diary </title>
+	<meta name="description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">
+	   <meta http-equiv="X-UA compatible" content="IE-edge">
+	   <meta property="og:title" content="Sapora">
+	   <meta property="og:url" content="https://www.sapora.com">
+	   <meta property="og:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">	
+	   <meta property="og:type" content="website">
+	   <meta name="twitter:card" content="summary">
+	   <meta name="twitter:title" content="SAPORA">
+	   <meta name="twitter:url" content="https://www.sapora.com">
+	   <meta name="twitter:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="twitter:image" content="/media/favicon/favicon.png">
+	   <meta name="weibo:type" content="webpage">
+	   <meta name="weibo:webpage:url" content="https://www.sapora.com">
+	   <meta name="weibo:webpage:title" content="SAPORA">
+	   <meta name="weibo:webpage:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="weibo:webpage:image" content="/media/favicon/favicon.png">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="shortcut icon" href="/media/favicon/favicon.png" type="image/x-icon" />
+</head>
+<body>
+    <style>
+        body{
+            background-color: #f4f4f4;font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;color:#2bbdf6;
+        }
+        #Header{
+        	position: fixed;
+        	z-index: 2;
+        	height: 50px;
+        	width: 100%;
+        	left:0px;
+        	top:0px;
+        	border-bottom:2px solid #2bbdf6;
+        	background-color: #f4f4f4;
+        }
+        #PrimaryColumn{
+        	position: fixed;
+        	top:50px;
+            left:0px;
+            width:350px;
+            height: 440px;
+        }
+        #ProfileImage{
+            cursor: pointer;
+        	margin:auto;
+        	margin-top: 30px;
+        	width: 120px;
+        	height: 120px;
+        	object-fit: cover;
+        	border-radius:60px;
+        	border:2px solid #2bbdf6;
+        }
+        #MiddleFielder{
+        	margin:auto;
+        	margin-top:10px;
+        	width:60%;
+        	height: 26px;
+        	text-align: center;
+        	padding-top: 4px;
+        	color:#2bbdf6;
+        }
+        #RestInfo{
+        	width: 100%;
+        	height: 250px;
+        }
+        #ProfileRow{
+        	display: inline-block;
+        	height: 40px;
+        	width: 100%;
+        }
+        #ProfileColumn{
+        	height: 40px;
+        	width: 175px;
+            color:#737579;
+            text-align: center;
+        }
+        #ProfileColumn1{
+        	height: 40px;
+        	width: 175px;
+            text-align: right;
+            text-align: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .EditProfile{
+        	position: absolute;
+        	margin: auto;
+        	left:125px;
+        	border:0px;
+        	outline: 0px;
+        	bottom:0px;
+        	width: 100px;
+        	height: 40px;
+        	background-color: #2bbdf6;
+        	border-radius: 30px;
+        	color: #fff;
+        	cursor: pointer;
+        	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+
+        }
+        #MiddleColumn{
+        	position: absolute;
+        	top:50px;
+        	left:350px;
+        	height: 400px;
+        	width:720px;
+        }
+        #DiaryEntry{
+        	left:0px;
+        	width: 100%;
+            height: 100px;
+            border-bottom: 2px solid #737579;
+        }
+        .DateDiary{
+        	display: inline-block;
+        	left: 0px;
+        	top: 0px;
+        	padding-top: 10px;
+        	margin-top: 5px;
+        	width:120px;
+        	height: 30px;
+        	border-radius: 20px;
+        	background-color: #2bbdf6;
+        	text-align: center;
+        	color: #ffffff;
+        }
+        .DateYear{
+        	display: inline-block;
+        	float: right;
+        	padding-top: 8px;
+        	margin-top: 5px;
+        	width:120px;
+        	height: 30px;
+        	border-radius: 20px;
+        	background-color: transparent;
+        	text-align: center;
+        	color: #000;
+        	border:1px solid #000;
+        }
+        .DiaryHeading{
+        	float: right;
+        	margin-top: 5px;
+        	width:100%;
+        	height: 50px;
+        	background-color: transparent;
+        	text-align: center;
+        	overflow: hidden;
+        	font-size: 20px;
+        }
+        #image{
+        	width: 120px;
+        	height: 120px;
+        	border-radius: 60px;
+        	object-fit: cover;
+        }
+        .MyProfile{
+    z-index: 4;
+    position: absolute;
+    top:52px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite;
+}
+        .AddDiary{
+        	position: absolute;
+        	margin: auto;
+            padding-top: 6px;
+        	margin-top: 10px;
+        	right: 10px;
+        	border:0px;
+        	outline: 0px;
+        	width: 74px;
+        	height: 30px;
+        	background-color: #2bbdf6;
+        	border-radius: 30px;
+        	color: #fff;
+        	cursor: pointer;
+        	font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+        	font-size: 16px;
+        }
+        #MainIcon{
+	    display: inline-block;
+		margin: auto;
+		margin-top: -33px;
+		margin-right: 10px;
+		padding-top:10px;
+		width:50px;
+		height: 40px;
+		border-radius: 100px;
+		background-color: #2bbdf6;
+		text-align:center;
+		font-family:verdana,arial,helvetica,sans-serif;
+		font-size:25px;
+		color:white;}
+		#icon{width: 50px;height: 100%;object-fit: cover;border-radius:30px;}  
+		#Rotate{
+			margin: auto;
+			width: 200px;
+			height: 50px;
+			border-radius: 25px;
+			object-fit: cover;
+		}
+		#TextMain{
+			display: inline-block;
+			font-weight: bolder;
+			position: absolute;
+			top:18px;
+			width: 100px;
+			margin-left: 10px;
+			font-size: 18px;
+
+		}
+         .Error{
+            text-align: center;
+            font-size: 20px;
+            width: 180px;
+            height: 80px;
+            margin:auto;
+            margin-top: 100px;
+        }
+        .Linker{
+            padding-top: 10px;
+            text-align: center;
+            margin:auto;
+            margin-top: 80px;
+            width: 140px;
+            height: 40px;
+            background-color: #2bbdf6;
+            color:#fff;
+            border-radius: 20px;
+        }
+        a,a:focus{
+            text-decoration: none;
+            color:#000;
+            outline: 0 none !important;
+        }
+           .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+.Intro{
+    color: #2bbdf6;
+    margin:auto;
+    width: 280px;
+    height: 30px;
+    text-align: center;
+}
+
+/* Modal Content */
+.modal-content {
+    z-index: 10;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #f8f8f8;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+    color: #c7c7c7;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    border-bottom:2px solid #000;
+    padding: 2px 0px;
+    background-color: #fff;
+    color: #000;
+    height: 45px;
+    box-shadow: 0px 0px 2px 4px rgba(0,0,0,0.16);
+}
+
+.modal-body {padding: 0px;
+           height: auto;
+           width: 100%;
+           margin-top: 20px;
+           background-color: antiquewhite;
+           }
+.header_title{
+            margin-top: 15px;
+            margin-left: 20px;
+             font-size: 19px;
+             font-weight: bolder;
+             font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;
+        }
+
+.modal-footer {
+    bottom: 0px;
+    padding: 2px 0px;
+    background-color: #fafafa;
+    color: #6699ff;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 60px;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+   
+     
+#id_ProfilePic {
+    display: none;
+}
+.Headline, .BodyDiary { 
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
+    font-size: 18px;
+    margin-top: 20px;
+    border: 0px;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: 0px;
+    border-bottom: 2px solid #000;
+    background-color: transparent;
+    color: #000;
+}
+button {
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #2bbdf6;
+    color: white;
+    border: 0px;
+    outline: 0px;
+    font-size: 16px;
+}     
+ .Headline:hover,.HeadInput:hover,.BodyDiary:hover{border-bottom: 2px solid #2bbdf6;background-color: #fff;}
+        .BodyDiary{
+        overflow: auto;
+        min-height: 150px;
+        height: auto;
+        border:2px solid #000;
+    }
+	
+    </style>
+    <div id="Header">
+    	<a href="/NewEntry/{{slug}}" class="AddDiary" style="text-align:center;color: white;">+ Write</a>
+    	<div id="Rotate">
+    	<img id="icon"src="/media/Favicon/favicon.PNG"/>
+    	<div id="TextMain">| S-Diary</div>
+        </div>
+    </div>
+    <div id="PrimaryColumn">
+          {% for Result in ProfileResults %}
+           <div id="ProfileImage">
+               <img src="{{Result.ProfilePic.url}}"id ="image"/>
+           </div>
+           <div id="MiddleFielder">{{ slug }}</div>
+           <table id="RestInfo">
+            <tr id="ProfileRow">
+                    <td id="ProfileColumn">Name</td>
+                    <td id="ProfileColumn1"> {{ Result.Name }}</td>
+                </tr>
+               <tr id="ProfileRow">
+                   <td id="ProfileColumn">Lives in</td>
+                   <td id="ProfileColumn1">{{ Result.LivesAt }}</td>
+               </tr>
+               <tr id="ProfileRow">
+                   <td id="ProfileColumn">Works At</td>
+                   <td id="ProfileColumn1">{{ Result.WorksAt }}</td>
+               </tr>
+               <tr id="ProfileRow">
+                   <td id="ProfileColumn">Hobbies</td>
+                   <td id="ProfileColumn1">{{ Result.Hobbies }}</td>
+               </tr>
+           </table>
+        {% empty %}
+                <div id="ProfileImage">
+                    <img src="/media/UserDefaultAvatar/pic.svg"id ="image"/>
+               </div>
+               <div id="MiddleFielder">Username</div>
+               <table id="RestInfo">
+                   <tr id="ProfileRow">
+                     <td id="ProfileColumn">Lives in</td>
+                     <td id="ProfileColumn1">______</td>
+                   </tr>
+                   <tr id="ProfileRow">
+                      <td id="ProfileColumn">Works At</td>
+                      <td id="ProfileColumn1">_____</td>
+                   </tr>
+                   <tr id="ProfileRow">
+                      <td id="ProfileColumn">Hobbies</td>
+                      <td id="ProfileColumn1">________________</td>
+                   </tr>
+              </table>
+        {% endfor %}
+    	<button class="EditProfile" id="myBtn">Edit Profile</button>
+    </div>
+
+    <div id="MiddleColumn">
+        {% for post in Results %}
+        <a href="/Diary/{{slug}}/{{post.id}}">
+    	<div id="DiaryEntry">
+    		<div class="DateDiary">{{ post.DateCreated.day}}{{ post.DateCreated.month }}</div>
+    		<div class="DateYear">{{ post.DateCreated.year }}</div>
+    		<div class="DiaryHeading">{{ post.DiaryHeading }}</div>
+    	</div>
+        </a>
+        {% empty %}
+        <div class="Error">
+            Sorry but you have not started writing your diary
+        </div>
+        <a href="/DiaryEntry/{{slug}}">
+            <div class="Linker">
+                Start Writing
+            </div>
+        </a>
+        {% endfor %}
+    	
+    </div>
+
+
+
+
+ <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <div class="header_title">Edit Profile</div>
+    </div>
+    <div class="modal-body">
+      
+
+      <form class="MyProfile" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.ProfilePic }}
+        <label class="ProfilePicUpload" for="id_ProfilePic">
+            {% for p in ProfileResults %}
+            <div id="ProfileImage"><img src="{{ p.ProfilePic.url }}" id="image"/></div>
+            {% empty %}
+            <div id="ProfileImage"><img src="/media/UserDefaultAvatar/pic.svg"id ="image"/></div>
+            {% endfor %}
+        </label>
+        <div class="Intro">Click on Image to update(New Changes will occur once you submit the form)</div>
+        {{ form.Name }}
+        {{ form.LivesAt }}
+        {{ form.WorksAt }}
+        {{ form.Hobbies }}
+       
+      
+        <button type="submit">Done</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+    <script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>

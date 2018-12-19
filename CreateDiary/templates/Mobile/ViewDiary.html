@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title> S-Diary </title>
+	<meta name="description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">
+	   <meta http-equiv="X-UA compatible" content="IE-edge">
+	   <meta property="og:title" content="Sapora">
+	   <meta property="og:url" content="https://www.sapora.com">
+	   <meta property="og:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">	
+	   <meta property="og:type" content="website">
+	   <meta name="twitter:card" content="summary">
+	   <meta name="twitter:title" content="SAPORA">
+	   <meta name="twitter:url" content="https://www.sapora.com">
+	   <meta name="twitter:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="twitter:image" content="/media/favicon/favicon.png">
+	   <meta name="weibo:type" content="webpage">
+	   <meta name="weibo:webpage:url" content="https://www.sapora.com">
+	   <meta name="weibo:webpage:title" content="SAPORA">
+	   <meta name="weibo:webpage:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
+	   <meta name="weibo:webpage:image" content="/media/favicon/favicon.png">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="shortcut icon" href="/media/favicon/favicon.png" type="image/x-icon" />
+</head>
+<body>
+<style>
+body{font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,나눔고딕,sans-serif;}
+.Container{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: auto;
+	background-color: #f4f4f4;
+}
+.Date{
+	width: 200px;
+	border-radius:20px; 
+	padding-top:15px; 
+	height: 35px;
+	background-color: #2bbdf6;
+	text-align: center;
+	color:white; 
+	margin:auto;
+	margin-top: 20px;
+}
+.Heading{
+	width: 60%;
+	margin:auto;
+	height: auto;
+	min-height: 80px;
+	text-align: center;
+	margin-top: 20px;
+	background-color: transparent;
+	padding: 10px;
+	font-size: 20px;
+}
+.DBody{
+	background-image: url("/media/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover; 
+	margin: auto;
+	width: 60%;
+	height: auto;
+	margin-top: 20px;
+	padding: 10px;
+	font-family: Brush Script MT, Brush Script Std, cursive;
+	font-size: 25px;
+	border-right:2px solid #2bbdf6;
+	border-left: 2px solid #2bbdf6;
+	min-height: 300px;
+	color:#fff;
+	padding-left: 20px;
+	margin-bottom: 0px;
+}
+@media(max-width: 400px)
+{
+	.DBody{
+		width: 90%;
+		border:0px;
+	}
+	.Heading{
+		width: 94%;
+	}
+}
+</style>
+<div class="Container">
+<div class="Date">{{ DiaryEntry.DateCreated }}</div>
+<div class="Heading">{{ DiaryEntry.DiaryHeading }}</div>
+<div class="DBody">{{ DiaryEntry.DiaryBody }}</div>
+</div>
