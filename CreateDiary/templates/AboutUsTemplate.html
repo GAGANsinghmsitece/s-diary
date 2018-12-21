@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+	{% load static %}
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title> S-Diary </title>
 	<meta name="description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">
 	   <meta http-equiv="X-UA compatible" content="IE-edge">
-	   <meta property="og:title" content="Sapora">
-	   <meta property="og:url" content="https://www.sapora.com">
+	   <meta property="og:title" content="S-Diary">
+	   <meta property="og:url" content="https://s-diary.herokuapp.com">
 	   <meta property="og:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">	
 	   <meta property="og:type" content="website">
 	   <meta name="twitter:card" content="summary">
-	   <meta name="twitter:title" content="SAPORA">
-	   <meta name="twitter:url" content="https://www.sapora.com">
+	   <meta name="twitter:title" content="S-Diary">
+	   <meta name="twitter:url" content="https://s-diary.herokuapp.com">
 	   <meta name="twitter:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
-	   <meta name="twitter:image" content="/media/favicon/favicon.png">
+	   <meta name="twitter:image" content="{% static "/images/favicon/favicon.png" %}">
 	   <meta name="weibo:type" content="webpage">
-	   <meta name="weibo:webpage:url" content="https://www.sapora.com">
+	   <meta name="weibo:webpage:url" content="https://www.s-diary.herokuapp.com">
 	   <meta name="weibo:webpage:title" content="SAPORA">
 	   <meta name="weibo:webpage:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
-	   <meta name="weibo:webpage:image" content="/media/favicon/favicon.png">
+	   <meta name="weibo:webpage:image" content="{% static "/images/favicon/favicon.png" %}">
 	   <meta name="viewport" content="width=device-width, initial-scale=1">
-	   <link rel="shortcut icon" href="/media/favicon/favicon.png" type="image/x-icon" />
+	   <link rel="shortcut icon" href="{% static "/images/favicon/favicon.png" %}" type="image/x-icon" />
 </head>
 <body>
     <style>
@@ -239,7 +240,7 @@ a,a:hover{
     }
 }
 </style>
- <div id="header"><a href=""><img id="icon"src="/media/Favicon/favicon.PNG"/></a>
+ <div id="header"><a href=""><img id="icon"src="{%static "/images/Favicon/favicon.PNG" %}"/></a>
     	<div class="dropdown">
   <div class="Title">S-Diary&#9660;</div>
   <div class="dropdown-content">
@@ -269,11 +270,11 @@ a,a:hover{
 <div class="ConnectColumn">
 	 <div class="HeadingColumnConnect">Connect with us</div>
 
-	  <a href="https://instagram.com/sapora_signal" class="ConnectLink"><div class="ColumnConnect"><img src="/media/Icon/Instagram.png"/><div class="TextConnect">Sapora_Signal</div></div></a>
+	  <a href="https://instagram.com/sapora_signal" class="ConnectLink"><div class="ColumnConnect"><img src="{%static  "images/Icon/Instagram.png" %}"/><div class="TextConnect">Sapora_Signal</div></div></a>
 
-      <a href="https://twitter.com/saporasignal" class="ConnectLink"><div class="ColumnConnect"><img src="/media/Icon/Twitter.png"/><div class="TextConnect">SAPORAsignal</div></div></a>
+      <a href="https://twitter.com/saporasignal" class="ConnectLink"><div class="ColumnConnect"><img src="{%static "images/Icon/Twitter.png" %}"/><div class="TextConnect">SAPORAsignal</div></div></a>
 
-      <a href="https://www.youtube.com/channel/UCvsa_5QIw7rSRYRSwHURQuw?view_as=subscriber" class="ConnectLink"><div class="ColumnConnect"><img src="/media/Icon/Youtube.png"/><div class="TextConnect">SAPORA inc.</div></div></a>
+      <a href="https://www.youtube.com/channel/UCvsa_5QIw7rSRYRSwHURQuw?view_as=subscriber" class="ConnectLink"><div class="ColumnConnect"><img src="{%static "images/Icon/Youtube.png" %}"/><div class="TextConnect">SAPORA inc.</div></div></a>
 
 
      <div class="CompanyInfo">

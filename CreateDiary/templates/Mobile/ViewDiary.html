@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+	{% load static %}
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title> S-Diary </title>
 	<meta name="description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">
 	   <meta http-equiv="X-UA compatible" content="IE-edge">
-	   <meta property="og:title" content="Sapora">
-	   <meta property="og:url" content="https://www.sapora.com">
+	   <meta property="og:title" content="S-Diary">
+	   <meta property="og:url" content="https://s-diary.herokuapp.com">
 	   <meta property="og:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">	
 	   <meta property="og:type" content="website">
 	   <meta name="twitter:card" content="summary">
-	   <meta name="twitter:title" content="SAPORA">
-	   <meta name="twitter:url" content="https://www.sapora.com">
+	   <meta name="twitter:title" content="S-Diary">
+	   <meta name="twitter:url" content="https://s-diary.herokuapp.com">
 	   <meta name="twitter:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
-	   <meta name="twitter:image" content="/media/favicon/favicon.png">
+	   <meta name="twitter:image" content="{% static "/images/favicon/favicon.png" %}">
 	   <meta name="weibo:type" content="webpage">
-	   <meta name="weibo:webpage:url" content="https://www.sapora.com">
+	   <meta name="weibo:webpage:url" content="https://www.s-diary.herokuapp.com">
 	   <meta name="weibo:webpage:title" content="SAPORA">
 	   <meta name="weibo:webpage:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
-	   <meta name="weibo:webpage:image" content="/media/favicon/favicon.png">
+	   <meta name="weibo:webpage:image" content="{% static "/images/favicon/favicon.png" %}">
 	   <meta name="viewport" content="width=device-width, initial-scale=1">
-	   <link rel="shortcut icon" href="/media/favicon/favicon.png" type="image/x-icon" />
+	   <link rel="shortcut icon" href="{% static "/images/favicon/favicon.png" %}" type="image/x-icon" />
 </head>
 <body>
 <style>
@@ -56,7 +57,7 @@ body{font-family: "-apple-system",BlinkMacSystemFont,Roboto,helvetica,Arial,ë‚˜ë
 	font-size: 20px;
 }
 .DBody{
-	background-image: url("/media/background.jpg");
+	background-image: url("{%static "images/background.jpg" %}");
 	background-repeat: no-repeat;
 	background-size: cover; 
 	margin: auto;

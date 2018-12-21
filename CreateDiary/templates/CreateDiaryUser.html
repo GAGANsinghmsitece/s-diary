@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+	{% load static %}
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title> S-Diary </title>
 	<meta name="description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">
 	   <meta http-equiv="X-UA compatible" content="IE-edge">
-	   <meta property="og:title" content="Sapora">
-	   <meta property="og:url" content="https://www.sapora.com">
+	   <meta property="og:title" content="S-Diary">
+	   <meta property="og:url" content="https://s-diary.herokuapp.com">
 	   <meta property="og:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">	
 	   <meta property="og:type" content="website">
 	   <meta name="twitter:card" content="summary">
-	   <meta name="twitter:title" content="SAPORA">
-	   <meta name="twitter:url" content="https://www.sapora.com">
+	   <meta name="twitter:title" content="S-Diary">
+	   <meta name="twitter:url" content="https://s-diary.herokuapp.com">
 	   <meta name="twitter:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
-	   <meta name="twitter:image" content="/media/favicon/favicon.png">
+	   <meta name="twitter:image" content="{% static "/images/favicon/favicon.png" %}">
 	   <meta name="weibo:type" content="webpage">
-	   <meta name="weibo:webpage:url" content="https://www.sapora.com">
+	   <meta name="weibo:webpage:url" content="https://www.s-diary.herokuapp.com">
 	   <meta name="weibo:webpage:title" content="SAPORA">
 	   <meta name="weibo:webpage:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
-	   <meta name="weibo:webpage:image" content="/media/favicon/favicon.png">
+	   <meta name="weibo:webpage:image" content="{% static "/images/favicon/favicon.png" %}">
 	   <meta name="viewport" content="width=device-width, initial-scale=1">
-	   <link rel="shortcut icon" href="/media/favicon/favicon.png" type="image/x-icon" />
+	   <link rel="shortcut icon" href="{% static "/images/favicon/favicon.png" %}" type="image/x-icon" />
 </head>
 <body>
 <style type="text/css">
@@ -284,7 +285,7 @@ a:hover{
   cursor: pointer;
 }
 </style>
-<div id="header"><a href=""><img id="icon"src="/media/Favicon/favicon.PNG"/></a>
+<div id="header"><a href=""><img id="icon"src="{%static "/images/Favicon/favicon.PNG" %}"/></a>
 	<div id="MainIcon">S</div>
 <ul id="FooterList">
 	<li class="List"><a href="/Home">Home</a></li>
@@ -315,25 +316,25 @@ a:hover{
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <img src="/media/MainPage/Book.svg" style="width:100%" id="SlideShowImage">
+  <img src="{%static "/images/MainPage/Book.svg" %}"style="width:100%" id="SlideShowImage">
   <div class="TextMain">Diary</div>
   <div class="text">Start writing intersting moments of this day, making it memorable </div>
 </div>
 
 <div class="mySlides fade">
-  <img src="/media/MainPage/Sync.svg" style="width:100%" id="SlideShowImage">
+  <img src="{%static "/images/MainPage/Sync.svg" %}" style="width:100%" id="SlideShowImage">
   <div class="TextMain">No Sync</div>
   <div class="text">No need to store Your personalized S-Diary on your device</div>
 </div>
 
 <div class="mySlides fade">
-  <img src="/media/MainPage/Responsive.svg" style="width:100%" id="SlideShowImage">
+  <img src="{%static "/images/MainPage/Responsive.svg" %}" style="width:100%" id="SlideShowImage">
   <div class="TextMain">Choose Your device</div>
   <div class="text">Write with Desktop, Phone, Tablet, whichever suits you</div>
 </div>
 
 <div class="mySlides fade">
-  <img src="/media/MainPage/Privacy.svg" style="width:100%" id="SlideShowImage">
+  <img src="{%static "images/MainPage/Privacy.svg" %}" style="width:100%" id="SlideShowImage">
   <div class="TextMain">Privacy by default</div>
   <div class="text">We value your privacy at top</div>
 </div>

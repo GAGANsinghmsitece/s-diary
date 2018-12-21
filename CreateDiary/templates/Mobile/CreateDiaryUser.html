@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+	{% load static %}
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title> S-Diary </title>
 	<meta name="description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">
 	   <meta http-equiv="X-UA compatible" content="IE-edge">
-	   <meta property="og:title" content="Sapora">
-	   <meta property="og:url" content="https://www.sapora.com">
+	   <meta property="og:title" content="S-Diary">
+	   <meta property="og:url" content="https://s-diary.herokuapp.com">
 	   <meta property="og:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want">	
 	   <meta property="og:type" content="website">
 	   <meta name="twitter:card" content="summary">
-	   <meta name="twitter:title" content="SAPORA">
-	   <meta name="twitter:url" content="https://www.sapora.com">
+	   <meta name="twitter:title" content="S-Diary">
+	   <meta name="twitter:url" content="https://s-diary.herokuapp.com">
 	   <meta name="twitter:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
-	   <meta name="twitter:image" content="/media/favicon/favicon.png">
+	   <meta name="twitter:image" content="{% static "/images/favicon/favicon.png" %}">
 	   <meta name="weibo:type" content="webpage">
-	   <meta name="weibo:webpage:url" content="https://www.sapora.com">
+	   <meta name="weibo:webpage:url" content="https://www.s-diary.herokuapp.com">
 	   <meta name="weibo:webpage:title" content="SAPORA">
 	   <meta name="weibo:webpage:description" content="S-Diary is a online diary keeping platform so that  you can keep diary where you go, without need of sync and on any device you want" >
-	   <meta name="weibo:webpage:image" content="/media/favicon/favicon.png">
+	   <meta name="weibo:webpage:image" content="{% static "/images/favicon/favicon.png" %}">
 	   <meta name="viewport" content="width=device-width, initial-scale=1">
-	   <link rel="shortcut icon" href="/media/favicon/favicon.png" type="image/x-icon" />
+	   <link rel="shortcut icon" href="{% static "/images/favicon/favicon.png" %}" type="image/x-icon" />
 </head>
 <body>
     <style>
@@ -342,7 +343,7 @@ button{
             display: none;
         }
 	</style>
-    <div id="header"><a href=""><img id="icon"src="/media/Favicon/favicon.PNG"/></a>
+    <div id="header"><a href=""><img id="icon"src="{%static "/images/Favicon/favicon.PNG" %}"/></a>
     	<div class="dropdown">
   <div class="Title">S-Diary&#9660;</div>
   <div class="dropdown-content">
@@ -367,7 +368,7 @@ button{
 
 	<div class="Slide">
 		<div class="SlideImage">
-			<img src="/media/MainPage/Book.svg" style="width:100%" id="SlideShowImage">
+			<img src="{%static "/images/MainPage/Book.svg" %}" style="width:100%" id="SlideShowImage">
 		</div>
 		<div class="SlideCaption">
 			Start writing intersting moments of this day, making it memorable
@@ -379,7 +380,7 @@ button{
 
 	<div class="Slide">
 		<div class="SlideImage">
-			<img src="/media/MainPage/Sync.svg" style="width:100%" id="SlideShowImage">
+			<img src="{% static "/images/MainPage/Sync.svg" %}" style="width:100%" id="SlideShowImage">
 		</div>
 		<div class="SlideCaption">
 			No need to store Your personalized S-Diary on your device
@@ -391,7 +392,7 @@ button{
 
 	<div class="Slide">
 		<div class="SlideImage">
-			<img src="/media/MainPage/Responsive.svg" style="width:100%" id="SlideShowImage">
+			<img src="{%static "/images/MainPage/Responsive.svg" %}" style="width:100%" id="SlideShowImage">
 		</div>
 		<div class="SlideCaption">
 			Write with Desktop, Phone, Tablet, whichever suits you
@@ -403,7 +404,7 @@ button{
 
 	<div class="Slide">
 		<div class="SlideImage">
-			<img src="/media/MainPage/Privacy.svg" style="width:100%" id="SlideShowImage">
+			<img src="{%static "/images/MainPage/Privacy.svg" %}" style="width:100%" id="SlideShowImage">
 		</div>
 		<div class="SlideCaption">
 			We value your privacy at top
@@ -418,8 +419,8 @@ button{
 			<div id="MainIcon1">S</div>
 		</div>
 		<div class="SlideCaption">
-			<a href="https://instagram.com/sapora_signal"><div class="ConnectOne"><img src="media/Icon/Instagram.png"/><div class="ConnectText">Instagram</div></div></a>
-			<a href="https://twitter.com/saporasignal"><div class="ConnectTwo"><img src="media/Icon/Twitter.png"/><div class="ConnectText">Twitter</div></div></a>
+			<a href="https://instagram.com/sapora_signal"><div class="ConnectOne"><img src="{%static "images/Icon/Instagram.png" %}"/><div class="ConnectText">Instagram</div></div></a>
+			<a href="https://twitter.com/saporasignal"><div class="ConnectTwo"><img src="{%static "images/Icon/Twitter.png" %}"/><div class="ConnectText">Twitter</div></div></a>
 		</div>
 		<div class="SlideTitle">
 			Follow Us
